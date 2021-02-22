@@ -58,10 +58,28 @@ Piece.prototype.toString = function pieceToString() {
     }
     return output;
 }
-
+const SINGLE = Piece("1",[[0,0]]);
 const TEE = new Piece("T",[[0,0],[0,-1],[-1,0],[0,1]]);
+const SQUARE = Piece("Q",[[0,0],[0,1],[1,0],[1,1]]);
+const DOUBLE = Piece("2",[[0,0],[1,0]]);
+const TRIPLE = Piece("3",[[0,0],[1,0], [-1,0]]);
+const QUADRA = Piece("4",[[0,0],[1,0], [-1,0], [2,0]]);
+const STEP = Piece("S",[[0,0],[1,0],[0,1],[-1,1]]);
+const EL = Piece("L",[[-1,0],[0,0],[0,1],[-2,0]]);
+const CORNER = Piece("C",[[0,0],[0,1],[-1,0]]);
 
+const BLOCKS = [SINGLE, TEE, SQUARE, DOUBLE, TRIPLE, QUADRA, STEP, EL, CORNER];
 
-
+const BLOCK_DICT = {
+    "1": SINGLE,
+    "T": TEE,
+    "Q": SQUARE,
+    "2": DOUBLE,
+    "3": TRIPLE,
+    "4": QUADRA,
+    "S": STEP,
+    "L": EL,
+    "C": CORNER
+};
 
 console.log(TEE.toString());

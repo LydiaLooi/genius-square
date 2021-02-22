@@ -52,9 +52,6 @@ class Board:
                     if c == piece.symbol:
                         self.board[i][j] = " "
 
-            print("AAA")
-            print(self.placed)
-
         else:
             print("[Block could not be placed]")
 
